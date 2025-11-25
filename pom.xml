@@ -14,8 +14,9 @@
     </modules>
 
     <properties>
-        <camel.version>4.10.5</camel.version>
-        <spring-boot.version>3.4.6</spring-boot.version>
+        <camel.version>4.10.7</camel.version>
+        <spring-boot.version>3.4.10</spring-boot.version>
+        <karaf.version>4.4.8</karaf.version>
     </properties>
 
     <dependencyManagement>
