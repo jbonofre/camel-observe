@@ -11,6 +11,7 @@
     <modules>
         <module>routes</module>
         <module>runtimes</module>
+        <module>jms-bridge</module>
     </modules>
 
     <properties>
