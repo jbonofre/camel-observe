@@ -77,6 +77,9 @@
                         <goals>
                             <goal>build</goal>
                         </goals>
+                        <configuration>
+                          <quarkus.package.jar.type>uber-jar</quarkus.package.jar.type>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
