@@ -36,6 +36,7 @@ public class Producers {
     public ActiveMQConnectionFactory createActiveMQConnectionFactory() {
         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
         factory.setBrokerURL(ConfigProvider.getConfig().getValue("activemq.brokerURL", String.class));
+        factory.setExclusiveConsumer(true);
         factory.setUserName(ConfigProvider.getConfig().getValue("activemq.user", String.class));
         factory.setPassword(ConfigProvider.getConfig().getValue("activemq.password", String.class));
         return factory;

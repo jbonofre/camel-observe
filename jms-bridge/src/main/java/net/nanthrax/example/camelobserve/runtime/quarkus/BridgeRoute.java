@@ -22,7 +22,7 @@ public class BridgeRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("jms:queue:input?connectionFactory=#ibmMQConnectionFactory&concurrentConsumers=10&acknowledgementModeName=CLIENT_ACKNOWLEDGE")
+        from("jms:queue:input?connectionFactory=#activeMQConnectionFactory&concurrentConsumers=10&acknowledgementModeName=CLIENT_ACKNOWLEDGE")
             .to("jms:queue:output?connectionFactory=#activeMQConnectionFactory");
     }
     

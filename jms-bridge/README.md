@@ -61,10 +61,10 @@ from("jms:queue:input?connectionFactory=#ibmMQConnectionFactory&concurrentConsum
 
 If you have multiple instances of the same Camel route (see above), and you want to implement "HA" (like only one route is actually consuming, the other instances are in standby mode), you can use ActiveMQ `exclusiveConsumer` feature if you consumer from ActiveMQ.
 
-For that, just add `consumer.exclusive=true`:
+For that, you have to configure the ActiveMQ Connection Factory:
 
 ```
-from("jms:queue:input?exclusive.consumer=true&connectionFactory=#amqConnectionFactory&concurrentConsumers=10&acknowledgementModeName=CLIENT_ACKNOWLEDGE")
+factory.setExclusiveConsumer(true);
 ```
 
 If you are not consuming from ActiveMQ, you can use Camel idempotent consumer EIP.
